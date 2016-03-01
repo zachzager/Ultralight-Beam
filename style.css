@@ -5,11 +5,42 @@ body {
 	font-family: Helvetica;
 }
 
-#video {
-	text-align: center;
+/* side by side (video and lyrics) */
+@media screen and (min-width: 1000px) {
+    #video {
+		text-align: center;
+		position: fixed;	
+	}
+
+	#text {
+		text-align: center;
+		margin-left: 500px;
+	}
 }
 
-#text {
-	text-align: center;
+/* video on top */
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+    #video {
+		text-align: center;
+	}
 
+	#text {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 500px) {
+    #video {
+    	text-align: center;
+	}
+
+	iframe {
+		text-align: center;
+		width: 80%;
+		height: 80%;
+	}
+
+	#text {
+		text-align: center;
+	}
 }
